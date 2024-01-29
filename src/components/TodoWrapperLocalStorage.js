@@ -19,9 +19,15 @@ export const TodoWrapperLocalStorage = () => {
 
     const addTodo = todo => {
         const newDate = new Date().toLocaleString();
-        const newTodos = [...todos, { id: uuidv4(), date:newDate, task: todo, completed: false, isEditing: false }];
-        setTodos(newTodos);
-        localStorage.setItem('todos', JSON.stringify(newTodos));
+        if(todos){
+            const newTodos = [...todos, { id: uuidv4(), date:newDate, task: todo, completed: false, isEditing: false }];
+            setTodos(newTodos);
+            localStorage.setItem('todos', JSON.stringify(newTodos));
+        }else{
+            const array = [{ id: uuidv4(), date:newDate, task: todo, completed: false, isEditing: false }];
+            localStorage.setItem('todos', JSON.stringify(array));
+            setTodos(array);
+        }
     }
 
     const toggleComplete = id => {
