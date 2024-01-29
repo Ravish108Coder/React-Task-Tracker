@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# React Task Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple task tracker application built with React, featuring task management, local storage, filtering, and drag-and-drop functionality.
 
-## Available Scripts
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Styling](#styling)
+- [Responsiveness](#responsiveness)
+- [Local Storage](#local-storage)
+- [Filtering](#filtering)
+- [Drag and Drop](#drag-and-drop)
+- [Demo](#demo)
+- [Contributing](#contributing)
+- [License](#license)
 
-In the project directory, you can run:
+## Overview
+This React Task Tracker allows users to manage tasks efficiently. Tasks are displayed in a list format with details such as task name, date added, and status.
 
-### `npm start`
+## Features
+- **Task List:** Display a list of tasks with task name, date added, and status.
+- **Add Task:** Add new tasks to the list with a name and date added.
+- **Delete Task:** Remove tasks from the list.
+- **Mark as Completed:** Toggle tasks between completed and incomplete status.
+- **Styling:** Basic styling for a user-friendly interface.
+- **Responsiveness:** Ensures a seamless experience on both desktop and mobile devices.
+- **Local Storage:** Persists tasks even after page refresh.
+- **Filtering:** Filter tasks based on their status (completed/incomplete).
+- **Drag and Drop:** Reorder tasks with intuitive drag-and-drop functionality.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
+1. Clone the repository.
+```
+git clone https://github.com/your-username/react-task-tracker.git
+```
+2. Navigate to the project directory.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+cd react-task-tracker
+```
+3. Install dependencies.
 
-### `npm test`
+```
+npm install
+```
+## Usage
+### Run the application locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm start
+```
 
-### `npm run build`
+Access the application at http://localhost:3000 in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Styling
+The application uses basic styling to enhance the user interface. Feel free to customize the styling further as needed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Responsiveness
+The application is designed to be responsive and works well on various screen sizes, including desktop and mobile devices.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. Local Storage
+Tasks are stored in local storage, ensuring that they persist even if the page is refreshed.
 
-### `npm run eject`
+7. Filtering
+Use the filtering functionality to view tasks based on their status (completed/incomplete).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+8. Drag and Drop
+Tasks can be reordered using the drag-and-drop feature, providing a flexible and intuitive task management experience.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+9. Demo
+View a live demo of the application hosted on Vercel: React Task Tracker Demo.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+10. Contributing
+Contributions are welcome! Feel free to submit issues or pull requests.
