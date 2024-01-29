@@ -12,6 +12,7 @@ export const TodoWrapperLocalStorage = () => {
 
     useEffect(() => {
         const savedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+        console.log("hello",savedTodos)
         setTodos(savedTodos);
         handleFilter(filter)
     }, []);
@@ -36,11 +37,11 @@ export const TodoWrapperLocalStorage = () => {
     }
 
     const editTodo = id => {
-        setTodos(todos.map(todo => todo.id === id ? { ...todo, date: new Date().toLocaleString(), isEditing: !todo.isEditing } : todo))
+        setTodos(todos?.map(todo => todo.id === id ? { ...todo, date: new Date().toLocaleString(), isEditing: !todo.isEditing } : todo))
     }
 
     const editTask = (task, id) => {
-        const newTodos = todos.map(todo => todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo);
+        const newTodos = todos?.map(todo => todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo);
         setTodos(newTodos);
         localStorage.setItem('todos', JSON.stringify(newTodos));
     }
@@ -54,11 +55,11 @@ export const TodoWrapperLocalStorage = () => {
           setTodos(storedTodos);
         } else if (str === 'Complete') {
           console.log('Filtering: Complete');
-          const newTodos = storedTodos.filter((todo) => todo.completed === true);
+          const newTodos = storedTodos?.filter((todo) => todo.completed === true);
           setTodos(newTodos);
         } else if (str === 'Incomplete') {
           console.log('Filtering: Incomplete');
-          const newTodos = storedTodos.filter((todo) => todo.completed === false);
+          const newTodos = storedTodos?.filter((todo) => todo.completed === false);
           setTodos(newTodos);
         }
       };
@@ -73,7 +74,7 @@ export const TodoWrapperLocalStorage = () => {
                 <button onClick={()=>{handleFilter("Complete")}}>Complete</button>
                 <button onClick={()=>{handleFilter("Incomplete")}}>Incomplete</button>
             </div>
-            {todos.map((todo, index) => (
+            {todos?.map((todo, index) => (
                 todo.isEditing ? (
                     <EditTodoForm editTodo={editTask} task={todo} />
                 ) : (
